@@ -28,7 +28,7 @@ twitterStream.on("error", () => {
 });
 twitterStream.on("done", () => stream.end());
 
-app.get("/", function(req, res, next) {
+app.get("/api", function(req, res, next) {
   res.writeHead(200, { "Content-Type": "application/xnd-json" });
   stream
     .filter(tweet => tweet.text.includes("RT") === false)
