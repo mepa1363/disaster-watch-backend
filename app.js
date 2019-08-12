@@ -29,7 +29,7 @@ twitterStream.on("error", () => {
 twitterStream.on("done", () => stream.end());
 
 app.get("/api", function(req, res, next) {
-  res.writeHead(200, { "Content-Type": "application/xnd-json" });
+  res.writeHead(200, { "Content-Type": "application/x-ndjson" });
   stream
     .filter(tweet => tweet.text.includes("RT") === false)
     .map(tweet => {
