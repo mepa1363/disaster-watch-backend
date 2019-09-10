@@ -1,6 +1,6 @@
 {
   "name": "disasterbot",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "a twitter bot that collects disaster-related tweets",
   "main": "index.js",
   "scripts": {

@@ -28,7 +28,7 @@ twitterStream.on("error", () => {
 });
 twitterStream.on("done", () => stream.end());
 
-app.get("/api", function(req, res, next) {
+app.get("/api", function(req, res) {
   res.writeHead(200, { "Content-Type": "application/x-ndjson" });
   stream
     .filter(tweet => tweet.text.includes("RT") === false)
@@ -55,7 +55,7 @@ app.get("/api", function(req, res, next) {
     })
     .map(async tweet => {
       let classificationResult;
-      await fetch("http://localhost:5000/classify", {
+      await fetch("http://51.143.126.0/score", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
