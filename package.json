@@ -14,7 +14,7 @@
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^2.6.1",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
     "scramjet": "^4.23.2",
